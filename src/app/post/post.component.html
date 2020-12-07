@@ -1,0 +1,12 @@
+<mat-card style='margin-bottom: 20px'>
+  <div class='btn_wrapper'>
+    <div class='close'>
+      <mat-icon (click)='removePost()'>clear</mat-icon>
+    </div>
+  </div>
+  <mat-card-title>{{post.title}}</mat-card-title>
+  <mat-card-content>{{post.text}}</mat-card-content>
+  <mat-card-footer>
+    <ng-content></ng-content>
+  </mat-card-footer>
+</mat-card>

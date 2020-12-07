@@ -1,0 +1,32 @@
+<mat-form-field style='width: 100%'>
+  <mat-label>Title</mat-label>
+  <input
+    type='text'
+    matInput
+    [(ngModel)]='title'
+    #titleInput
+  >
+</mat-form-field>
+
+<mat-form-field style='width: 100%'>
+  <mat-label>Text</mat-label>
+  <input
+    type='text'
+    matInput
+    [(ngModel)]='text'
+  >
+</mat-form-field>
+<button
+  mat-flat-button
+  style='margin-right: 10px'
+  color='primary'
+  (click)='addPost()'
+>Add post
+</button>
+<button
+  mat-stroked-button
+  color='primary'
+  (click)='focusTitle()'
+>Focus title
+</button>
+

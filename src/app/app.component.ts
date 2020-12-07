@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+
+export interface Post {
+  title: string
+  text: string
+  id?: number
+}
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-blog';
+  posts: Post[] = [
+    {title: 'Post', text: 'Some text some text some text some text some text', id: 1},
+    {title: 'Post2', text: 'Some text else some text some text some text some text', id: 2},
+  ]
+
+  removePost(id: number) {
+    this.posts = this.posts.filter(p => p.id !== id)
+  }
+
+  addPosts(post: Post) {
+    this.posts.unshift(post)
+  }
 }
